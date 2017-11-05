@@ -1,0 +1,57 @@
+这个文档主要著明一些公用的类
+以后添加的类主要放在mortal/common文件夹下
+
+1. 显示对象
+
+① 对象创建
+Objcreate类    		里面包含大部分公用的创建的显示对象。 创建文本,按钮,背景,花纹背景,分页,Tabbar,数字输入框等等
+ObjTeamCreate 		给文本赋值key value值,标题列表,居中显示。
+
+② 组件
+PageSelecter 		分页组件
+NumInput   			数字输入组件  
+SecTimerView		倒计时文本显示组件
+BaseProgressBar		一般进度条通用组件
+MoneyItem           背包里的元宝，铜钱数量的显示  
+
+AutoLayoutTextContainer 自动调整文本距离的容器， 例如将所有文本垂直排列，并且每个文本之间的距离为5       
+	
+③基类
+NoSkinCellRenderer	透明的CellRenderer
+Skin1CellRenderer	日常没人任务里面那种样式的CellRenderer
+WarScoreView		战场仙盟战里面摆设在UI层的小面板的基类
+
+2. 处理
+TodayNotTipUtil		今日不再提示
+DateParser			日期格式化
+LaterUtil			延迟回调  可用于处理资源释放
+DisplayUtil			显示对象处理
+ClassTypesUtil		各种类型的值处理、判断等
+
+时间
+Global.instance.callLater 下一帧调用的。
+
+3.内存管理
+IClean接口 清除一切事件引用 让对象可以垃圾回收
+IDispose接口  清理对象并放入对象池
+
+4.技能
+CanIUseSkill， 管理是否可以使用技能：快捷键使用、挂机使用、点击野怪使用
+
+5.配置
+ConfigBase: 客户端配置基类, 写一个配置只需要重写：initConfig， getKey函数
+
+6.任务
+解析任务奖励： TaskUtil.parseTaskBonus
+
+7.规则类（src/mortal/game/rules/...）
+MapIdRule		地图id相关
+BossRule		boss相关
+BuffRule		buff相关
+CopyCodeRule	副本id相关
+TaskRule		任务相关
+ShopRule		商店相关
+等等...
+
+
+

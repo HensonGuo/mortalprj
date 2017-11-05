@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
+  <includeClasses>
+    <classEntry path="frEngine.animateControler.cylinderControler.CylinderHControler"/>
+    <classEntry path="frEngine.shader.filters.fragmentFilters.UVMaskFilter"/>
+    <classEntry path="frEngine.animateControler.keyframe.INodeKey"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>

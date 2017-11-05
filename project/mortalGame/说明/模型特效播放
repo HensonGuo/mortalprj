@@ -1,0 +1,21 @@
+1. 配置文件
+frameType.xml 定义了一些帧数的划分、保存不同的模型的帧数不同划分类型(frameType),每个类型包含一些动作,每个动作指定帧数范围,type为0的为默认使用
+modleFrame.xml 非使用默认模型的要对应frameType定义的模型名字
+
+数据
+SwfFrames		一个模型播放的所有（包括所有动作）帧的数据
+ActionInfo		一个动作的帧的数据
+FramesData		保存管理所有SwfFrames
+
+直接用于播放的数据
+FrameArray		用于BitmapPlayer播放的BitmapFrame数组
+BitmapFrame		用于BitmapPlayer播放的一帧的数据 （包括bitmapData等）
+		
+IMovieClipData	加载数据并存储
+ModelData		保存管理所有IMovieClipData
+ModelType		
+
+播放器								说明
+BitmapPlayer 	继承Bitmap			FrameArray
+GPlayer  		继承BitmapPlayer 	IMovieClipData
+SWFPlayer 		继承GPlayer			用FrameTimer来控制播放BimtapData

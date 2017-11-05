@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+		<script type="text/javascript" src="js/swfobject.js"></script>
+		<script type="text/javascript" src="js/global.js"></script>
+		<title>《凡人修真2》</title>
+		<style>
+			html,body { margin: auto 0px;overflow:auto;height:100%;}
+			.table1{
+        		position:absolute;
+			}
+		</style>
+	</head>
+	<body onload="Brower.onloadComplete()">
+		<table id="table" class="table1" width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+
+			<tr>
+				<td width="100%" height="100%">
+					<div id="flashcontent" />
+				</td>
+				
+			</tr>
+		</table>
+		
+		<SCRIPT LANGUAGE="JavaScript">
+		
+			
+			var params = Brower.getParams();
+			
+			var myparams = {};			
+			myparams.username = "cjx2"; 					//游戏用户名
+
+			myparams.loginIP = "192.168.1.174:9500";//params.loginIP;
+			myparams.gameIP = "192.168.1.174";//params.gameIP;
+
+			myparams.gameUrl =  "MainGame.swf";
+			myparams.configUrl = "data/data";
+			myparams.createRoleUrl = "CreateRole_v2.swf";
+			myparams.mainPath = "";
+
+			myparams.password = "123456";
+
+			myparams.isConnectionServer = true;
+			
+			myparams.platformCode = "4399";
+			myparams.platformUserName = "fengyk";				//平台账号（充值用）
+			
+			myparams.player_id = "123456"; 					//玩家id
+			myparams.userId = 0;
+			myparams.server = "S1";						//服务器标记
+			myparams.time = "1303270052";					//unix时间戳
+			myparams.issm = 1;						//实名制标记
+			myparams.isAdult = "1234567";					//防沉迷标记
+			myparams.totalOnlineTime = "";					//平台在线时间
+			myparams.flag = "agsgsgsgsgssss";				//验证flag
+			
+			myparams.defaultCamp = 1;					//默认阵营
+			myparams.defaultSex = 1;					//默认性别
+			myparams.roleName = "张三"					//默认角色名
+			myparams.guest = 0;						//游客模式
+			myparams.fastUrl = "download.php";
+			myparams.dothingUrl="/f2_admin/__interface/up_reg_info.php?1=1"// php 统计页面
+			myparams.phpID = 1;
+			
+			myparams.isDebug = true;
+			
+			myparams.randomNameUrl="/f2_game/get_default_rolename.php?1=1";//随机获取角色名页面
+			myparams.updateUrl = "";//版本更新文件存放路径
+			
+			Brower.loadSwf("Preloader.swf?v="+new Date(),myparams,"flashcontent");
+			swfobject.createCSS("#flashContent", "display:block;text-align:left;");
+			
+		</SCRIPT>
+	</body>
+</html>

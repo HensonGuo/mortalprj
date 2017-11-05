@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
+  <includeClasses>
+    <classEntry path="chat.ChatLayerManager"/>
+    <classEntry path="chat.ChatMessageWorking"/>
+    <classEntry path="chat.ChatRes"/>
+    <classEntry path="chat.display.item.ChatBox"/>
+    <classEntry path="chat.display.item.ChatCell"/>
+    <classEntry path="chat.display.item.ChatItem"/>
+    <classEntry path="chat.display.item.ChatNotes"/>
+    <classEntry path="chat.display.item.ChatPanel"/>
+    <classEntry path="chat.display.menu.ChatMeneOperate"/>
+    <classEntry path="chat.display.menu.ListMenu"/>
+    <classEntry path="chat.display.menu.ListMenuCellRenderer"/>
+    <classEntry path="chat.display.menu.PlayerMenuCellRenderer"/>
+    <classEntry path="chat.event.ChatDispatcher"/>
+    <classEntry path="chat.event.ChatMenuEvent"/>
+    <classEntry path="chat.style.ScrollBarStyle"/>
+    <classEntry path="chat.style.ScrollPaneStyle"/>
+    <classEntry path="chat.style.scrollBar.BaseScrollSkill"/>
+    <classEntry path="chat.style.scrollBar.DownArrowDisabledSkin"/>
+    <classEntry path="chat.style.scrollBar.DownArrowDownSkin"/>
+    <classEntry path="chat.style.scrollBar.DownArrowOverSkin"/>
+    <classEntry path="chat.style.scrollBar.DownArrowUpSkin"/>
+    <classEntry path="chat.style.scrollBar.ScrollPaneStyle"/>
+    <classEntry path="chat.style.scrollBar.ThumbDisabledSkin"/>
+    <classEntry path="chat.style.scrollBar.ThumbDownSkin"/>
+    <classEntry path="chat.style.scrollBar.ThumbIcon"/>
+    <classEntry path="chat.style.scrollBar.ThumbOverSkin"/>
+    <classEntry path="chat.style.scrollBar.ThumbUpSkin"/>
+    <classEntry path="chat.style.scrollBar.TrackDisabledSkin"/>
+    <classEntry path="chat.style.scrollBar.TrackUpSkin"/>
+    <classEntry path="chat.style.scrollBar.UpArrowDisabledSkin"/>
+    <classEntry path="chat.style.scrollBar.UpArrowDownSkin"/>
+    <classEntry path="chat.style.scrollBar.UpArrowOverSkin"/>
+    <classEntry path="chat.style.scrollBar.UpArrowUpSkin"/>
+    <classEntry path="chat.textData.CellDataType"/>
+    <classEntry path="chat.textData.ChatCellData"/>
+    <classEntry path="chat.textData.ChatData"/>
+    <classEntry path="chat.textData.ChatItemData"/>
+    <classEntry path="chat.textData.ChatStyle"/>
+    <classEntry path="chat.textData.ChatType"/>
+    <classEntry path="net.RMISession"/>
+    <classEntry path="Regist"/>
+    <classEntry path="chat.event.ChatPanelEvent"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>

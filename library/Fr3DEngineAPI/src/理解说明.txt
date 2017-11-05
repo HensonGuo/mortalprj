@@ -1,0 +1,53 @@
+主循环：
+GameWord3D toDraw 
+-> GameScene3D toDraw 判断context3D 是否存在、暂停
+-> Scene3D render 对_renderList里面的所有Pivot3D调用draw方法
+-> Pivot3D draw 对 children里面的所有Pivot3D调用draw
+   Mesh3D  draw 调用render.draw
+
+主要类以及继承关系
+Pivot3D extends EventDispatcher 相当于DisplayObjectContainner
+		引用timerContorler(帧数控制)	VisibleControler(显示控制器)	Md5AnimateBase(挂载)等
+Mesh3D extends Pivot3D 相当于Sprite
+		支持鼠标事件	引用Vector.<Surface3D>	render:DefaultRender	MaterialParams
+		upload 和 download通过调用Surface3D对应方法实现
+		setMaterial 主要是对引用的Vector.<Surface3D>设置ShaderBase
+		draw 调用render.draw
+		
+DefaultRender
+		draw mesh.getSurface(i) as FrSurface3D 对每个FrSurface3D build AGAL并调用的 ShaderBase.draw 
+		
+ShaderBase
+		引用 FrProgram3D	Vc常量数据数组	Fc常量数据数组	VertexFilter	FragmentFilter
+		MaterialParams
+		build: 重新构建AGAL语言
+		draw：
+			上传纹理：		通过FrProgram3D里面的循环上传FsParams里面的Texture3D 
+			设置Program3D：	FrProgram3D.program3D
+			设置颜色遮罩：	context.setColorMask
+			上传顶点数据：	FrProgram3D.VaParamsList 获取对应的顶点数据上传
+			设置常量：		FrProgram3D.Vc|Fc|paramsMaxtrixList上传常量
+			
+FrSurface3D
+		vertexBuffers:Vector.<FrVertexBuffer3D>
+		
+FrProgram3D
+		upload 上传AGAL到显卡
+		registParam注册ToBuilderInfo 转化为数据保存
+
+FilterBase
+		写AGAL语言的基类
+				
+VertexFilter
+		顶点着色器基类 拼装AGAL语言
+		
+FragmentFilter
+		片段着色器基类 拼装AGAL语言
+		
+ToBuilderInfo
+		用于AGAL语言拼装转化
+		
+RegistParam 以及子类 管理寄存器
+		注册参数
+		
+		

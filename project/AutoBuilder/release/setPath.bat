@@ -1,0 +1,1 @@
+call ../setPath_release.bat

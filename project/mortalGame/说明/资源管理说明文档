@@ -1,0 +1,34 @@
+一. 压包与解析
+ConfigManager 加载压包的数据  解析压包的数据
+
+ResConfig 从ConfigManager里读取asset.vas的数据并解析 将资源信息写入  ResourceManager
+ResourceManager 保存所有的ResourceInfo
+
+资源信息有以下类型：
+ResourceInfo 基本类型
+".XML":XMLInfo,
+".JPG":ImageInfo,
+".PNG":ImageInfo,
+".GIF":ImageInfo,
+".DATA":DataInfo,
+".SWF":SWFInfo,
+".MPT":MapDataInfo,
+".JTA":JTAInfo
+
+二. loader
+1. StreamLoader加载的基类   （内部先用URLLoader 加载,再用Loader加载）
+2. ImageLoader、DataLoader、SWFLoader等 与 ResourceInfo类型对应
+
+三. 管理器
+LoaderManager 含有加载优先级    通过对应关系选择对应的加载器加载资源  加载的资源保存在ResourceInfo中
+Library 单独的加载，但是加载完的类定义保存在Library的内部语里面,之后通过GlobalClass获取保存在GlobalClass里面
+
+四. 具体的UI资源加载
+GImageBitmap LoaderManager加载
+GLoadedButton Library加载
+LoaderHelp Library加载
+
+五. 模型加载与内存释放
+加载方式：LoaderManager
+资源释放通过释放resourseInfo里面的资源
+

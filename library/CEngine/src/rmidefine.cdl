@@ -1,0 +1,72 @@
+#ifndef _CDF_RMI_DEFINE_H_
+#define _CDF_RMI_DEFINE_H_
+
+module Engine
+{
+	module RMI
+	{
+	   sequence<int> SeqRouterMap;
+		/**
+		* the rmi type
+		*/
+		enum ERMIMessageType
+		{
+			MessageTypeCall,                //the message call
+			MessageTypeCallRet,             //the message call ret
+			MessageTypeCallRedirect,        //the message call redirect
+			MessageTypeCallRetRedirect,     //the message call ret redirect
+			MessageTypeMQ,                  //the mq message
+		};
+	
+		enum ERMICallModel
+		{
+			CallModelSync,                  //the message call sync model
+			CallModelAsync                  //the message call async model
+		};
+	
+		enum ERMIDispatchStatus
+		{
+			DispatchOK,                     //the message dispatch ok
+			DispatchTimeOut,                //the message dispatch time out
+			DispatchException,              //the message dispatch exception
+			DispatchObjectNotExist,         //the message dispatch object not exist
+			DispatchOperationNotExist,      //the message dispatch operation not exist 
+			DispatchAsync                   //the message dispatch async
+		};
+		
+		/**
+		* the identity
+		*/
+		struct SIdentity
+		{
+			string name;                    //the identity name
+			//string category;
+		};
+		
+		/**
+		* the rmi call
+		*/
+		struct SRMICall
+		{
+			int messageId;                   //if the back model is 0 no back message
+			ERMICallModel callSynchType;     //the type of the call
+			SIdentity identity;              //the ident of the object
+			string operation;                //the operation of the object
+			int userKey;                     //the user key off router
+			SeqRouterMap routerMap;          //the router map
+		};
+		
+		/**
+		* the rmi ret
+		*/
+		struct SRMIReturn
+		{
+		    int messageId;
+		    ERMIDispatchStatus dispatchStatus;
+		    int userKey;                     //the user key off router
+		    SeqRouterMap routerMap;          //the router map
+		};
+	};
+};
+
+#endif

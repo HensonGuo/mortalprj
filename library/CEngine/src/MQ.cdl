@@ -1,0 +1,25 @@
+#ifndef _MQ_H_
+#define _MQ_H_
+
+module Framework
+{
+   module MQ
+   {
+      struct HandlerId
+      {
+          int type;
+          int id;
+      };
+      sequence<HandlerId> SeqHandlerId;
+      
+      struct MessageHead
+      {
+          int command;
+					int channelId;
+					SeqHandlerId fromIds;
+					SeqHandlerId toIds;
+      };
+   };
+};
+
+#endif

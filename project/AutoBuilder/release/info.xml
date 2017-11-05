@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<info>
+<entry
+   kind="dir"
+   path="."
+   revision="86400">
+<url>svn://svn.xiuxian.com:3694/flash/frmmo/otherRes</url>
+<repository>
+<root>svn://svn.xiuxian.com:3694</root>
+<uuid>169b1058-a0c8-6f49-ab36-7d32dd43e223</uuid>
+</repository>
+<wc-info>
+<wcroot-abspath>D:/xampp/htdocs/frmmo</wcroot-abspath>
+<schedule>normal</schedule>
+<depth>infinity</depth>
+</wc-info>
+<commit
+   revision="85856">
+<author>zhaopengyang</author>
+<date>2012-11-20T02:01:45.217915Z</date>
+</commit>
+</entry>
+</info>
